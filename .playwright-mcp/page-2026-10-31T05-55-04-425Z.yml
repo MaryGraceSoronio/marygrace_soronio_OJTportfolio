@@ -1,0 +1,246 @@
+- generic [ref=e2]:
+  - link "Skip to content" [ref=e3] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=e4]:
+    - generic [ref=e5]:
+      - link "Mary Grace V. Soronio, Home" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e7]: MG
+        - generic [ref=e8]: Mary Grace V. Soronio
+      - generic [ref=e16]:
+        - button "Switch to dark theme" [ref=e17]
+        - button "Close mobile menu" [expanded] [ref=e228]:
+          - generic [ref=e229]: Close
+    - dialog "Mobile Navigation Menu" [ref=e232]:
+      - navigation "Mobile Navigation" [ref=e233]:
+        - link "Home 00" [active] [ref=e234] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e235]: Home
+          - generic [ref=e236]: "00"
+        - link "Work 01" [ref=e237] [cursor=pointer]:
+          - /url: /projects
+          - generic [ref=e238]: Work
+          - generic [ref=e239]: "01"
+        - link "About 02" [ref=e240] [cursor=pointer]:
+          - /url: /about
+          - generic [ref=e241]: About
+          - generic [ref=e242]: "02"
+        - link "Skills 03" [ref=e243] [cursor=pointer]:
+          - /url: /skills
+          - generic [ref=e244]: Skills
+          - generic [ref=e245]: "03"
+        - link "Contact 04" [ref=e246] [cursor=pointer]:
+          - /url: /contact
+          - generic [ref=e247]: Contact
+          - generic [ref=e248]: "04"
+        - generic [ref=e249]:
+          - generic [ref=e250]: Theme Switcher
+          - button "Switch to dark theme" [ref=e251]
+        - link "Available for OJT (700h)" [ref=e254] [cursor=pointer]:
+          - /url: /contact
+        - generic [ref=e259]:
+          - link "marygrace.soronio@g.msuiit.edu.ph" [ref=e260] [cursor=pointer]:
+            - /url: mailto:marygrace.soronio@g.msuiit.edu.ph
+          - link "+63 966 043 4042" [ref=e261] [cursor=pointer]:
+            - /url: tel:+639660434042
+          - link "github.com/MaryGraceSoronio" [ref=e262] [cursor=pointer]:
+            - /url: https://github.com/MaryGraceSoronio
+          - paragraph [ref=e263]: Iligan City, Philippines · MSU-IIT
+  - main [ref=e25]:
+    - generic [ref=e26]:
+      - generic [ref=e28]:
+        - generic [ref=e29]:
+          - paragraph [ref=e30]: MSU-IIT / Embedded systems / fourth year
+          - heading "I build the device and the dashboard." [level=1] [ref=e31]
+          - paragraph [ref=e32]: Embedded systems student at MSU-IIT. Sensors, RTOS firmware, and FPGA logic, carried through to a working interface.
+          - generic [ref=e33]:
+            - link "See the builds" [ref=e34] [cursor=pointer]:
+              - /url: /projects
+            - link "Read the thesis" [ref=e35] [cursor=pointer]:
+              - /url: /projects/fermonitor
+        - generic [ref=e38]:
+          - generic [ref=e39]:
+            - paragraph [ref=e40]: system readout
+            - generic [ref=e41]: available
+          - generic [ref=e43]:
+            - generic [ref=e44]:
+              - term [ref=e45]: Program
+              - definition [ref=e46]: BS Computer Applications
+            - generic [ref=e47]:
+              - term [ref=e48]: Major
+              - definition [ref=e49]: Embedded Systems
+            - generic [ref=e50]:
+              - term [ref=e51]: Standing
+              - definition [ref=e52]: CGPA 1.67351, Dean’s Lister
+            - generic [ref=e53]:
+              - term [ref=e54]: OJT
+              - definition [ref=e55]: 700 hours, looking for a team
+            - generic [ref=e56]:
+              - term [ref=e57]: Base
+              - definition [ref=e58]: Iligan City, Philippines
+          - generic [ref=e59]:
+            - paragraph [ref=e60]: documented builds
+            - paragraph [ref=e61]: "17"
+      - generic [ref=e80]:
+        - generic [ref=e81]:
+          - generic [ref=e82]:
+            - heading "Selected builds" [level=2] [ref=e83]
+            - paragraph [ref=e84]: Three of seventeen. The rest cover bare-metal AVR, FPGA control, and full-stack web.
+          - link "All 17 builds" [ref=e85] [cursor=pointer]:
+            - /url: /projects
+            - text: All 17 builds
+            - generic [aria-hidden] [ref=e86]: "->"
+        - generic [ref=e87]:
+          - 'link "FERMONITOR: Machine Learning-Driven Electronic Nose for Artisanal Fermentation Monitoring 01 Sensing & IoT FERMONITOR An electronic nose that reads bagoong fermentation from the gas above the pail. ML, Gas Sensing, Raspberry Pi, ADS1115" [ref=e89] [cursor=pointer]':
+            - /url: /projects/fermonitor
+            - generic [ref=e90]:
+              - 'img "FERMONITOR: Machine Learning-Driven Electronic Nose for Artisanal Fermentation Monitoring" [ref=e91]'
+              - generic [ref=e92]: "01"
+            - generic [ref=e93]:
+              - paragraph [ref=e94]: Sensing & IoT
+              - heading "FERMONITOR" [level=3] [ref=e95]
+              - paragraph [ref=e96]: An electronic nose that reads bagoong fermentation from the gas above the pail.
+              - generic [ref=e97]:
+                - paragraph [ref=e98]: ML, Gas Sensing, Raspberry Pi, ADS1115
+                - generic [aria-hidden] [ref=e99]: "->"
+          - generic [ref=e100]:
+            - 'link "Real-Time Multisensor Room Monitoring System: Concurrent Multi-Task Environmental Telemetry on STM32 & FreeRTOS 02 Embedded & RTOS Real-Time Multisensor Room Monitoring System Four sensor tasks on FreeRTOS, each one on its own schedule. STM32, FreeRTOS, Wokwi, Embedded C" [ref=e102] [cursor=pointer]':
+              - /url: /projects/room-monitoring
+              - generic [ref=e103]:
+                - 'img "Real-Time Multisensor Room Monitoring System: Concurrent Multi-Task Environmental Telemetry on STM32 & FreeRTOS" [ref=e104]'
+                - generic [ref=e105]: "02"
+              - generic [ref=e106]:
+                - paragraph [ref=e107]: Embedded & RTOS
+                - heading "Real-Time Multisensor Room Monitoring System" [level=3] [ref=e108]
+                - paragraph [ref=e109]: Four sensor tasks on FreeRTOS, each one on its own schedule.
+                - generic [ref=e110]:
+                  - paragraph [ref=e111]: STM32, FreeRTOS, Wokwi, Embedded C
+                  - generic [aria-hidden] [ref=e112]: "->"
+            - 'link "Industrial Drying Oven Control System: Comparative Multi-Platform Industrial Thermal Loop: CODESYS PLC, Verilog HDL & RT-Thread RTOS 03 Embedded & RTOS Industrial Drying Oven Control System The same oven controller built three ways: PLC, HDL and RTOS. CODESYS, Verilog, RT-Thread, Multi-Platform" [ref=e114] [cursor=pointer]':
+              - /url: /projects/drying-oven
+              - generic [ref=e115]:
+                - 'img "Industrial Drying Oven Control System: Comparative Multi-Platform Industrial Thermal Loop: CODESYS PLC, Verilog HDL & RT-Thread RTOS" [ref=e116]'
+                - generic [ref=e117]: "03"
+              - generic [ref=e118]:
+                - paragraph [ref=e119]: Embedded & RTOS
+                - heading "Industrial Drying Oven Control System" [level=3] [ref=e120]
+                - paragraph [ref=e121]: "The same oven controller built three ways: PLC, HDL and RTOS."
+                - generic [ref=e122]:
+                  - paragraph [ref=e123]: CODESYS, Verilog, RT-Thread, Multi-Platform
+                  - generic [aria-hidden] [ref=e124]: "->"
+      - generic [ref=e126]:
+        - generic [ref=e127]:
+          - heading "What I work with" [level=2] [ref=e128]
+          - link "Full toolchain" [ref=e129] [cursor=pointer]:
+            - /url: /skills
+            - text: Full toolchain
+            - generic [aria-hidden] [ref=e130]: "->"
+        - generic [ref=e131]:
+          - generic [ref=e132]:
+            - heading "Languages" [level=3] [ref=e133]
+            - list [ref=e134]:
+              - listitem [ref=e135]: C
+              - listitem [ref=e136]: C++
+              - listitem [ref=e137]: Python
+              - listitem [ref=e138]: Java
+              - listitem [ref=e139]: Verilog HDL
+              - listitem [ref=e140]: PLC (CODESYS)
+              - listitem [ref=e141]: VHDL
+              - listitem [ref=e142]: AVR Assembly
+          - generic [ref=e143]:
+            - heading "Hardware & Architecture" [level=3] [ref=e144]
+            - list [ref=e145]:
+              - listitem [ref=e146]: ESP32
+              - listitem [ref=e147]: STM32
+              - listitem [ref=e148]: Arduino
+              - listitem [ref=e149]: PCB Layout
+              - listitem [ref=e150]: Sensor Interfacing
+              - listitem [ref=e151]: FPGA (Vivado)
+          - generic [ref=e152]:
+            - heading "Web & Systems" [level=3] [ref=e153]
+            - list [ref=e154]:
+              - listitem [ref=e155]: React JS
+              - listitem [ref=e156]: React TS
+              - listitem [ref=e157]: Tailwind CSS
+              - listitem [ref=e158]: Laravel
+              - listitem [ref=e159]: PHP
+              - listitem [ref=e160]: Node.js
+              - listitem [ref=e161]: Express
+              - listitem [ref=e162]: JavaScript
+          - generic [ref=e163]:
+            - heading "EDA & Development Tools" [level=3] [ref=e164]
+            - list [ref=e165]:
+              - listitem [ref=e166]: VS Code
+              - listitem [ref=e167]: Vivado
+              - listitem [ref=e168]: RT-Thread Studio
+              - listitem [ref=e169]: CODESYS
+              - listitem [ref=e170]: Qt Creator
+              - listitem [ref=e171]: Wokwi
+              - listitem [ref=e172]: Edge Impulse
+              - listitem [ref=e173]: PlatformIO
+      - generic [ref=e175]:
+        - generic [ref=e176]:
+          - paragraph [ref=e177]: open to OJT placements
+          - heading "Seven hundred hours, one team." [level=2] [ref=e178]
+          - paragraph [ref=e179]: "I would rather spend them where a student owns something real: firmware, a rig, or a dashboard that ships."
+        - generic [ref=e180]:
+          - link "Email me" [ref=e181] [cursor=pointer]:
+            - /url: /contact
+          - link "marygrace.soronio@g.msuiit.edu.ph" [ref=e182] [cursor=pointer]:
+            - /url: mailto:marygrace.soronio@g.msuiit.edu.ph
+  - contentinfo [ref=e183]:
+    - generic [ref=e184]:
+      - generic [ref=e185]:
+        - generic [ref=e186]:
+          - link "Mary Grace V. Soronio" [ref=e187] [cursor=pointer]:
+            - /url: /
+          - paragraph [ref=e188]: Embedded systems developer at MSU-IIT. Specialized in firmware architecture, sensor telemetry, hardware-software co-design, and real-time processing.
+          - generic [ref=e189]:
+            - generic [ref=e190]:
+              - generic [ref=e192]: 700h
+              - text: OJT Available
+            - generic [ref=e193]:
+              - text: CGPA
+              - generic [ref=e194]: "1.67351"
+              - text: · Dean's Lister
+          - paragraph [ref=e195]: Fourth-year BS Computer Applications · MSU-Iligan Institute of Technology
+        - navigation "Footer Navigation" [ref=e196]:
+          - paragraph [ref=e197]: Navigation
+          - list [ref=e198]:
+            - listitem [ref=e199]:
+              - link "Home" [ref=e200] [cursor=pointer]:
+                - /url: /
+            - listitem [ref=e201]:
+              - link "Work" [ref=e202] [cursor=pointer]:
+                - /url: /projects
+            - listitem [ref=e203]:
+              - link "About" [ref=e204] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=e205]:
+              - link "Skills" [ref=e206] [cursor=pointer]:
+                - /url: /skills
+            - listitem [ref=e207]:
+              - link "Contact" [ref=e208] [cursor=pointer]:
+                - /url: /contact
+        - generic [ref=e209]:
+          - paragraph [ref=e210]: Verified Channels
+          - list [ref=e211]:
+            - listitem [ref=e212]:
+              - link "marygrace.soronio@g.msuiit.edu.ph" [ref=e213] [cursor=pointer]:
+                - /url: mailto:marygrace.soronio@g.msuiit.edu.ph
+            - listitem [ref=e214]:
+              - link "+63 966 043 4042" [ref=e215] [cursor=pointer]:
+                - /url: tel:+639660434042
+            - listitem [ref=e216]:
+              - link "GitHub" [ref=e217] [cursor=pointer]:
+                - /url: https://github.com/MaryGraceSoronio
+            - listitem [ref=e218]:
+              - link "LinkedIn" [ref=e219] [cursor=pointer]:
+                - /url: https://www.linkedin.com/in/mary-grace-soronio-943663298
+      - generic [ref=e220]:
+        - generic [ref=e221]:
+          - paragraph [ref=e222]: © 2026 Mary Grace V. Soronio. Authentic Portfolio.
+          - paragraph [ref=e224]: Iligan City, Philippines
+        - button "Scroll back to top of page" [ref=e225]:
+          - generic [ref=e226]: Back to top
+          - generic [aria-hidden] [ref=e227]: ↑

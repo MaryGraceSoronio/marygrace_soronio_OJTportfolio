@@ -1,0 +1,323 @@
+- generic [ref=f5e2]:
+  - link "skip to the work" [ref=f5e3] [cursor=pointer]:
+    - /url: "#work"
+  - banner [ref=f5e4]:
+    - generic [ref=f5e6]:
+      - link "Mary Grace V. Soronio" [ref=f5e7] [cursor=pointer]:
+        - /url: "#top"
+      - generic [ref=f5e9]:
+        - navigation "Sections" [ref=f5e10]:
+          - link "Work" [ref=f5e11] [cursor=pointer]:
+            - /url: "#work"
+          - link "Thesis" [ref=f5e12] [cursor=pointer]:
+            - /url: "#about"
+          - link "Training" [ref=f5e13] [cursor=pointer]:
+            - /url: "#training"
+          - link "Contact" [ref=f5e14] [cursor=pointer]:
+            - /url: "#contact"
+        - link "Email Me" [ref=f5e15] [cursor=pointer]:
+          - /url: mailto:marygrace.soronio@g.msuiit.edu.ph
+  - main [ref=f5e16]:
+    - generic [ref=f5e18]:
+      - generic [ref=f5e19]:
+        - generic [ref=f5e20]:
+          - generic [ref=f5e24]: AVAILABLE FOR 700-HOUR OJT
+          - generic [ref=f5e25]: ·
+          - generic [ref=f5e26]: ILIGAN CITY
+        - heading "A Board That Plays Für Elise" [level=1] [ref=f5e27]
+        - paragraph [ref=f5e28]: Fourth-year embedded systems student at MSU-IIT. I build physical devices and digital telemetry dashboards.
+        - generic [ref=f5e29]:
+          - link "See the Work" [ref=f5e30] [cursor=pointer]:
+            - /url: "#work"
+          - link "GitHub ↗" [ref=f5e31] [cursor=pointer]:
+            - /url: https://github.com/MaryGraceSoronio
+          - link "Inquire for OJT" [ref=f5e32] [cursor=pointer]:
+            - /url: mailto:marygrace.soronio@g.msuiit.edu.ph
+      - 'figure "BOARD TELEMETRY: The MP3 player with STM32F407, ES8388 codec, FreeRTOS audio streams, and OLED track list." [ref=f5e33]':
+        - img "The STM32F407 board I built the MP3 player on, its OLED still lit, with the ES8388 codec and the audio jacks in frame." [ref=f5e35]
+    - generic [ref=f5e38]:
+      - generic [ref=f5e39]:
+        - generic [ref=f5e40]:
+          - heading "Silicon to Screen" [level=2] [ref=f5e41]
+          - paragraph [ref=f5e42]: Sixteen builds and a thesis still running.
+        - generic [ref=f5e43]:
+          - button "All Builds" [ref=f5e44]
+          - button "Embedded & RTOS" [ref=f5e45]
+          - button "Sensing & IoT" [ref=f5e46]
+          - button "FPGA & PCB" [ref=f5e47]
+          - button "Web & Systems" [ref=f5e48]
+      - list [ref=f5e50]:
+        - listitem [ref=f5e51]:
+          - button "01 FERMONITOR Inspect FERMONITOR" [ref=f5e52] [cursor=pointer]:
+            - generic [ref=f5e53]:
+              - generic [ref=f5e54]: "01"
+              - generic [ref=f5e55]: FERMONITOR
+            - button "Inspect FERMONITOR" [ref=f5e57]: ↗
+          - generic [ref=f5e59]:
+            - generic [ref=f5e60]:
+              - 'img "FERMONITOR: An electronic nose that reads bagoong fermentation from the gas above the pail." [ref=f5e61]'
+              - button "Inspect Details ↗" [ref=f5e62]:
+                - generic [ref=f5e63]: Inspect Details
+                - generic [ref=f5e64]: ↗
+            - generic [ref=f5e65]:
+              - generic [ref=f5e66]:
+                - heading "FERMONITOR" [level=3] [ref=f5e67]
+                - button "Open Spec Sheet" [ref=f5e68]
+              - paragraph [ref=f5e69]: ML, Gas Sensing, Raspberry Pi
+              - paragraph [ref=f5e70]: An electronic nose that reads bagoong fermentation from the gas above the pail.
+              - paragraph [ref=f5e71]: Undergraduate thesis, paper forthcoming
+        - listitem [ref=f5e72]:
+          - button "02 eTee Inspect eTee" [ref=f5e73] [cursor=pointer]:
+            - generic [ref=f5e74]:
+              - generic [ref=f5e75]: "02"
+              - generic [ref=f5e76]: eTee
+            - button "Inspect eTee" [ref=f5e78]: ↗
+        - listitem [ref=f5e79]:
+          - button "03 AquaFlush Inspect AquaFlush" [ref=f5e80] [cursor=pointer]:
+            - generic [ref=f5e81]:
+              - generic [ref=f5e82]: "03"
+              - generic [ref=f5e83]: AquaFlush
+            - button "Inspect AquaFlush" [ref=f5e85]: ↗
+        - listitem [ref=f5e86]:
+          - button "04 Room Monitor Inspect Room Monitor" [ref=f5e87] [cursor=pointer]:
+            - generic [ref=f5e88]:
+              - generic [ref=f5e89]: "04"
+              - generic [ref=f5e90]: Room Monitor
+            - button "Inspect Room Monitor" [ref=f5e92]: ↗
+        - listitem [ref=f5e93]:
+          - button "05 Drying Oven Inspect Drying Oven" [ref=f5e94] [cursor=pointer]:
+            - generic [ref=f5e95]:
+              - generic [ref=f5e96]: "05"
+              - generic [ref=f5e97]: Drying Oven
+            - button "Inspect Drying Oven" [ref=f5e99]: ↗
+        - listitem [ref=f5e100]:
+          - button "06 RT-Thread HMI Inspect RT-Thread HMI" [ref=f5e101] [cursor=pointer]:
+            - generic [ref=f5e102]:
+              - generic [ref=f5e103]: "06"
+              - generic [ref=f5e104]: RT-Thread HMI
+            - button "Inspect RT-Thread HMI" [ref=f5e106]: ↗
+        - listitem [ref=f5e107]:
+          - button "07 FPGA Oven Inspect FPGA Oven" [ref=f5e108] [cursor=pointer]:
+            - generic [ref=f5e109]:
+              - generic [ref=f5e110]: "07"
+              - generic [ref=f5e111]: FPGA Oven
+            - button "Inspect FPGA Oven" [ref=f5e113]: ↗
+        - listitem [ref=f5e114]:
+          - button "08 12V Power Supply Inspect 12V Power Supply" [ref=f5e115] [cursor=pointer]:
+            - generic [ref=f5e116]:
+              - generic [ref=f5e117]: "08"
+              - generic [ref=f5e118]: 12V Power Supply
+            - button "Inspect 12V Power Supply" [ref=f5e120]: ↗
+        - listitem [ref=f5e121]:
+          - button "09 Line-Following Robot Inspect Line-Following Robot" [ref=f5e122] [cursor=pointer]:
+            - generic [ref=f5e123]:
+              - generic [ref=f5e124]: "09"
+              - generic [ref=f5e125]: Line-Following Robot
+            - button "Inspect Line-Following Robot" [ref=f5e127]: ↗
+        - listitem [ref=f5e128]:
+          - button "10 Personal MP3 Player Inspect Personal MP3 Player" [ref=f5e129] [cursor=pointer]:
+            - generic [ref=f5e130]:
+              - generic [ref=f5e131]: "10"
+              - generic [ref=f5e132]: Personal MP3 Player
+            - button "Inspect Personal MP3 Player" [ref=f5e134]: ↗
+        - listitem [ref=f5e135]:
+          - button "11 Keyboard Detection Inspect Keyboard Detection" [ref=f5e136] [cursor=pointer]:
+            - generic [ref=f5e137]:
+              - generic [ref=f5e138]: "11"
+              - generic [ref=f5e139]: Keyboard Detection
+            - button "Inspect Keyboard Detection" [ref=f5e141]: ↗
+        - listitem [ref=f5e142]:
+          - button "12 Activity Recognition Inspect Activity Recognition" [ref=f5e143] [cursor=pointer]:
+            - generic [ref=f5e144]:
+              - generic [ref=f5e145]: "12"
+              - generic [ref=f5e146]: Activity Recognition
+            - button "Inspect Activity Recognition" [ref=f5e148]: ↗
+        - listitem [ref=f5e149]:
+          - button "13 RiceDirect PH Inspect RiceDirect PH" [ref=f5e150] [cursor=pointer]:
+            - generic [ref=f5e151]:
+              - generic [ref=f5e152]: "13"
+              - generic [ref=f5e153]: RiceDirect PH
+            - button "Inspect RiceDirect PH" [ref=f5e155]: ↗
+        - listitem [ref=f5e156]:
+          - button "14 DigiStamp Inspect DigiStamp" [ref=f5e157] [cursor=pointer]:
+            - generic [ref=f5e158]:
+              - generic [ref=f5e159]: "14"
+              - generic [ref=f5e160]: DigiStamp
+            - button "Inspect DigiStamp" [ref=f5e162]: ↗
+        - listitem [ref=f5e163]:
+          - button "15 Contribution Tracker Inspect Contribution Tracker" [ref=f5e164] [cursor=pointer]:
+            - generic [ref=f5e165]:
+              - generic [ref=f5e166]: "15"
+              - generic [ref=f5e167]: Contribution Tracker
+            - button "Inspect Contribution Tracker" [ref=f5e169]: ↗
+        - listitem [ref=f5e170]:
+          - button "16 MSU-IIT CampusLink Inspect MSU-IIT CampusLink" [ref=f5e171] [cursor=pointer]:
+            - generic [ref=f5e172]:
+              - generic [ref=f5e173]: "16"
+              - generic [ref=f5e174]: MSU-IIT CampusLink
+            - button "Inspect MSU-IIT CampusLink" [ref=f5e176]: ↗
+        - listitem [ref=f5e177]:
+          - button "17 QR Attendance System Inspect QR Attendance System" [ref=f5e178] [cursor=pointer]:
+            - generic [ref=f5e179]:
+              - generic [ref=f5e180]: "17"
+              - generic [ref=f5e181]: QR Attendance System
+            - button "Inspect QR Attendance System" [ref=f5e183]: ↗
+    - generic [ref=f5e185]:
+      - generic [ref=f5e186]:
+        - generic [ref=f5e187]:
+          - generic [ref=f5e188]: THESIS SPECIFICATION · FERMONITOR
+          - heading "The Nose That Reads Bagoong" [level=2] [ref=f5e191]
+        - paragraph [ref=f5e192]: My undergraduate thesis. I designed the gas sampling chamber, wrote the deterministic signal acquisition loop, and built the live verification console below.
+      - 'figure "Live electronic nose telemetry dashboard displaying batch classification STATUS: SAFE TO EAT" [ref=f5e193]':
+        - img "FERMONITOR’s Food Safety Status panel reading SAFE TO EAT, with the model’s pH, temperature and gas readings all stable." [ref=f5e195]
+        - generic [ref=f5e196]:
+          - generic [ref=f5e197]: Live electronic nose telemetry dashboard displaying batch classification
+          - generic [ref=f5e198]: "STATUS: SAFE TO EAT"
+      - generic [ref=f5e199]:
+        - generic [ref=f5e200]:
+          - term [ref=f5e201]:
+            - generic [ref=f5e202]: sensing array
+          - definition [ref=f5e203]: MQ-137 (Ammonia), MQ-136 (H₂S), MQ-135 (Air Quality), NDIR optical CO₂ channel
+          - generic [ref=f5e204]: CH01 - CH04
+        - generic [ref=f5e205]:
+          - term [ref=f5e206]:
+            - generic [ref=f5e207]: signal chain
+          - definition [ref=f5e208]: Precision ADS1115 analog-to-digital converter over isolated I²C bus
+          - generic [ref=f5e209]: 16-BIT ADC
+        - generic [ref=f5e210]:
+          - term [ref=f5e211]:
+            - generic [ref=f5e212]: compute stack
+          - definition [ref=f5e213]: "Raspberry Pi 4B: deterministic local sampling, on-device SQLite buffer, Firebase cloud telemetry"
+          - generic [ref=f5e214]: EDGE SBC
+        - generic [ref=f5e215]:
+          - term [ref=f5e216]:
+            - generic [ref=f5e217]: inference model
+          - definition [ref=f5e218]: 10-minute gas evolution windows mapped into a 22-feature statistical vector
+          - generic [ref=f5e219]: ML PIPELINE
+        - generic [ref=f5e220]:
+          - term [ref=f5e221]:
+            - generic [ref=f5e222]: classification
+          - definition [ref=f5e223]: "Instant safety classification: Fresh / Active Fermentation / Spoilage Alert"
+          - generic [ref=f5e224]: REAL-TIME VERDICT
+      - generic [ref=f5e225]:
+        - paragraph [ref=f5e226]: BS Computer Applications, major in Embedded Systems, MSU-IIT
+        - paragraph [ref=f5e227]: "CGPA: 1.67351 · DEAN’S LISTER"
+    - generic [ref=f5e229]:
+      - heading "The Tools Behind Sixteen Builds" [level=2] [ref=f5e230]
+      - generic [ref=f5e231]:
+        - generic [ref=f5e232]:
+          - term [ref=f5e233]: Languages
+          - definition [ref=f5e234]:
+            - generic [ref=f5e235]: C
+            - generic [ref=f5e236]: C++
+            - generic [ref=f5e237]: Python
+            - generic [ref=f5e238]: Java
+            - generic [ref=f5e239]: Verilog HDL
+            - generic [ref=f5e240]: PLC
+        - generic [ref=f5e241]:
+          - term [ref=f5e242]: Hardware & Architecture
+          - definition [ref=f5e243]:
+            - generic [ref=f5e244]: ESP32
+            - generic [ref=f5e245]: STM32
+            - generic [ref=f5e246]: Arduino
+            - generic [ref=f5e247]: PCB Layout
+            - generic [ref=f5e248]: Sensor Interfacing
+        - generic [ref=f5e249]:
+          - term [ref=f5e250]: Web & Systems
+          - definition [ref=f5e251]:
+            - generic [ref=f5e252]: React
+            - generic [ref=f5e253]: Laravel
+            - generic [ref=f5e254]: PHP
+            - generic [ref=f5e255]: JavaScript
+            - generic [ref=f5e256]: HTML
+        - generic [ref=f5e257]:
+          - term [ref=f5e258]: EDA & Development Tools
+          - definition [ref=f5e259]:
+            - generic [ref=f5e260]: VS Code
+            - generic [ref=f5e261]: Vivado
+            - generic [ref=f5e262]: RT-Thread Studio
+            - generic [ref=f5e263]: CODESYS
+            - generic [ref=f5e264]: Qt Creator
+            - generic [ref=f5e265]: Wokwi
+            - generic [ref=f5e266]: Edge Impulse
+    - generic [ref=f5e268]:
+      - heading "Council, Classroom, Camera" [level=2] [ref=f5e269]
+      - list [ref=f5e270]:
+        - listitem [ref=f5e271]:
+          - heading "Budget & Finance Undersecretary" [level=3] [ref=f5e272]
+          - paragraph [ref=f5e273]: CCS Student Council, MSU-IIT
+          - paragraph [ref=f5e274]: Aug 2025 to Jul 2026
+        - listitem [ref=f5e275]:
+          - heading "Budget & Finance Associate" [level=3] [ref=f5e276]
+          - paragraph [ref=f5e277]: CCS Executive Council, MSU-IIT
+          - paragraph [ref=f5e278]: Aug 2024 to Jul 2025
+        - listitem [ref=f5e279]:
+          - heading "Executive Secretary" [level=3] [ref=f5e280]
+          - paragraph [ref=f5e281]: Computer Applications Society
+          - paragraph [ref=f5e282]: Aug 2023 to May 2024
+        - listitem [ref=f5e283]:
+          - heading "ESL Teacher" [level=3] [ref=f5e284]
+          - paragraph [ref=f5e285]: Native Camp, Remote, Japan
+          - paragraph [ref=f5e286]: Jun 2025 to Present
+        - listitem [ref=f5e287]:
+          - heading "Freelance Video Editor" [level=3] [ref=f5e288]
+          - paragraph [ref=f5e289]: YouTube Automation, Remote
+          - paragraph [ref=f5e290]: Oct 2024 to Jun 2025
+    - generic [ref=f5e292]:
+      - heading "Seminars, Certifications & Technical Workshops" [level=2] [ref=f5e293]
+      - list [ref=f5e294]:
+        - listitem [ref=f5e295]:
+          - heading "AI Career Readiness Training" [level=3] [ref=f5e296]
+          - paragraph [ref=f5e297]: AI Ready ASEAN, MSU-IIT
+          - paragraph [ref=f5e298]: Aug 2026
+        - listitem [ref=f5e299]:
+          - 'heading "Quantum Circuits as Pictures: An Introduction to ZX Calculus" [level=3] [ref=f5e300]'
+          - paragraph [ref=f5e301]: Quantum Computing Society of the Philippines
+          - paragraph [ref=f5e302]: Mar 2026
+        - listitem [ref=f5e303]:
+          - heading "Embedded Systems Programming using the RT-Thread IoT OS" [level=3] [ref=f5e304]
+          - paragraph [ref=f5e305]: RT-Thread, CCS, MSU-IIT
+          - paragraph [ref=f5e306]: Nov 2025
+        - listitem [ref=f5e307]:
+          - 'heading "Seize Your Opportunity: An OJT Preparation Workshop" [level=3] [ref=f5e308]'
+          - paragraph [ref=f5e309]: KadaKareer, CCS, MSU-IIT
+          - paragraph [ref=f5e310]: Nov 2025
+        - listitem [ref=f5e311]:
+          - heading "IoT Conference Philippines" [level=3] [ref=f5e312]
+          - paragraph [ref=f5e313]: SMX Convention Center, Pasay City
+          - paragraph [ref=f5e314]: Sep 2025
+    - generic [ref=f5e316]:
+      - generic [ref=f5e317]:
+        - heading "Seven Hundred Hours" [level=2] [ref=f5e318]
+        - paragraph [ref=f5e319]: That is the OJT I am looking for. I want to build and ship physical hardware systems and connected dashboards on an engineering team.
+      - generic [ref=f5e320]:
+        - link "Email Me" [ref=f5e321] [cursor=pointer]:
+          - /url: mailto:marygrace.soronio@g.msuiit.edu.ph
+        - link "marygrace.soronio@g.msuiit.edu.ph" [ref=f5e322] [cursor=pointer]:
+          - /url: mailto:marygrace.soronio@g.msuiit.edu.ph
+        - link "+63 966 043 4042" [ref=f5e323] [cursor=pointer]:
+          - /url: tel:+639660434042
+        - paragraph [ref=f5e324]: Iligan City, Philippines
+  - contentinfo [ref=f5e325]:
+    - generic [ref=f5e326]:
+      - paragraph [ref=f5e327]: Mary Grace V. Soronio
+      - generic [ref=f5e328]:
+        - navigation "Footer" [ref=f5e329]:
+          - list [ref=f5e330]:
+            - listitem [ref=f5e331]:
+              - link "work" [ref=f5e332] [cursor=pointer]:
+                - /url: "#work"
+            - listitem [ref=f5e333]:
+              - link "thesis" [ref=f5e334] [cursor=pointer]:
+                - /url: "#about"
+            - listitem [ref=f5e335]:
+              - link "training" [ref=f5e336] [cursor=pointer]:
+                - /url: "#training"
+            - listitem [ref=f5e337]:
+              - link "github" [ref=f5e338] [cursor=pointer]:
+                - /url: https://github.com/MaryGraceSoronio
+            - listitem [ref=f5e339]:
+              - link "linkedin" [ref=f5e340] [cursor=pointer]:
+                - /url: https://www.linkedin.com/in/mary-grace-soronio-943663298
+        - paragraph [ref=f5e341]: English, Cebuano, Filipino, Japanese, A1 to A2
+        - paragraph [ref=f5e342]: Iligan City, Philippines. Set in Outfit and Onest.

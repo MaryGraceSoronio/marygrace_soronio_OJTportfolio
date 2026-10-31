@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 562" width="900" height="562">
+  <rect width="100%" height="100%" fill="#12091f"/>
+  <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+    <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(186, 147, 245, 0.08)" stroke-width="1"/>
+  </pattern>
+  <rect width="100%" height="100%" fill="url(#grid)"/>
+  <circle cx="450" cy="281" r="54" fill="#1a0d2e" stroke="#9d4edd" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <path d="M 436 281 L 464 281 M 450 267 L 450 295" stroke="#ba93f5" stroke-width="2" stroke-linecap="round"/>
+  <text x="450" y="370" text-anchor="middle" font-family="monospace" font-size="14" fill="#a79bb7" letter-spacing="0.1em">EMBEDDED HARDWARE CAPTURE</text>
+</svg>

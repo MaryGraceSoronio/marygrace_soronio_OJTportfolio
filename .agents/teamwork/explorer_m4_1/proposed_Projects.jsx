@@ -1,0 +1,416 @@
+import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
+import ProjectCard from '../components/ProjectCard.jsx'
+import Reveal from '../components/Reveal.jsx'
+import { categories, projects } from '../data/projects.js'
+
+/**
+ * Suggested quick-filter keywords for rapid recruiter & hardware lead audits
+ */
+const QUICK_FILTERS = [
+  'RTOS',
+  'FPGA',
+  'STM32',
+  'FreeRTOS',
+  'ESP32',
+  'Gas Sensing',
+  'Raspberry Pi',
+  'Python',
+]
+
+/**
+ * Search icon SVG with crisp stroke
+ */
+function SearchIcon({ className = 'h-4 w-4' }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 20 20"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <circle cx="9" cy="9" r="6" />
+      <line x1="13.5" y1="13.5" x2="18" y2="18" />
+    </svg>
+  )
+}
+
+/**
+ * Clear icon SVG
+ */
+function ClearIcon({ className = 'h-4 w-4' }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 20 20"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <line x1="5" y1="5" x2="15" y2="15" />
+      <line x1="15" y1="5" x2="5" y2="15" />
+    </svg>
+  )
+}
+
+/**
+ * Empty state radar icon
+ */
+function EmptyRadarIcon({ className = 'h-8 w-8' }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <circle cx="12" cy="12" r="10" />
+      <path d="M12 2a10 10 0 0 1 10 10" />
+      <path d="M12 6a6 6 0 0 1 6 6" />
+      <circle cx="12" cy="12" r="2" />
+      <line x1="12" y1="12" x2="19.07" y2="4.93" />
+    </svg>
+  )
+}
+
+/**
+ * Projects - Production-grade Projects Showcase View
+ * 
+ * Design Engineering Standards:
+ * - Emil Kowalski Micro-Interactions: 44px+ hit targets, active:scale-[0.97] tactile compression
+ * - Tabular Numerals: font-variant-numeric: tabular-nums on all counts, badges, and ledger indices
+ * - Reading Measure: p, descriptions bounded to max-w-[65ch]
+ * - Full URL synchronization (?category=...&q=...) for deep-linking and browser history resilience
+ * - Anti-AI-Slop Cyber-Physical aesthetic: obsidian-plum canvas, violet surfaces, radiant accents
+ */
+export default function Projects() {
+  const [searchParams, setSearchParams] = useSearchParams()
+
+  // 1. Read URL params with fallbacks
+  const categoryParam = searchParams.get('category') || 'all'
+  const queryParam = searchParams.get('q') || searchParams.get('search') || ''
+
+  // Validate active category
+  const activeCategory = useMemo(() => {
+    return categories.some((c) => c.id === categoryParam) ? categoryParam : 'all'
+  }, [categoryParam])
+
+  // Local controlled state for 0ms typing response without input jitter
+  const [query, setQuery] = useState(queryParam)
+
+  // Synchronize local input state if URL search param changes via history navigation
+  useEffect(() => {
+    setQuery(queryParam)
+  }, [queryParam])
+
+  // 2. Precompute authentic item counts for each category
+  const categoryCounts = useMemo(() => {
+    const counts = { all: projects.length }
+    for (const cat of categories) {
+      if (cat.id !== 'all') {
+        counts[cat.id] = projects.filter((p) => p.category === cat.id).length
+      }
+    }
+    return counts
+  }, [])
+
+  // 3. Handle Category Selection with URL reflection
+  const handleCategoryChange = useCallback(
+    (catId) => {
+      const next = new URLSearchParams(searchParams)
+      if (catId === 'all') {
+        next.delete('category')
+      } else {
+        next.set('category', catId)
+      }
+      setSearchParams(next, { replace: false })
+    },
+    [searchParams, setSearchParams]
+  )
+
+  // 4. Handle Search Input with URL reflection (debounced / immediate)
+  const handleQueryChange = useCallback(
+    (newQuery) => {
+      setQuery(newQuery)
+      const next = new URLSearchParams(searchParams)
+      const trimmed = newQuery.trim()
+      if (trimmed) {
+        next.set('q', trimmed)
+      } else {
+        next.delete('q')
+        next.delete('search')
+      }
+      setSearchParams(next, { replace: true })
+    },
+    [searchParams, setSearchParams]
+  )
+
+  // 5. Handle Reset All Filters
+  const handleResetFilters = useCallback(() => {
+    setQuery('')
+    const next = new URLSearchParams()
+    setSearchParams(next, { replace: false })
+  }, [setSearchParams])
+
+  // 6. Real-time filtering across authentic schema fields
+  const filtered = useMemo(() => {
+    const needle = query.trim().toLowerCase()
+    return projects.filter((project) => {
+      const inCategory = activeCategory === 'all' || project.category === activeCategory
+      if (!inCategory) return false
+      if (!needle) return true
+
+      const haystack = [
+        project.title,
+        project.name,
+        project.subtitle,
+        project.line,
+        project.summary,
+        project.stack,
+        project.categoryLabel,
+        ...(project.hardwareStack || []),
+        ...(project.softwareStack || []),
+        ...(project.tags || []),
+        project.details,
+        project.overview,
+        project.problem,
+        project.solution,
+      ]
+        .filter(Boolean)
+        .join(' ')
+        .toLowerCase()
+
+      return haystack.includes(needle)
+    })
+  }, [activeCategory, query])
+
+  const activeCategoryMeta = categories.find((c) => c.id === activeCategory) || categories[0]
+  const isFiltered = activeCategory !== 'all' || query.trim().length > 0
+
+  return (
+    <div className="shell pb-5xl pt-3xl">
+      {/* ------------------------------------------------------------------
+          1. Header & Telemetry Intro
+          ------------------------------------------------------------------ */}
+      <header className="max-w-[65ch]">
+        <div className="flex items-center gap-xs font-mono text-xs text-accent-light uppercase-tracked">
+          <span className="inline-block h-2 w-2 rounded-full bg-accent animate-pulse" aria-hidden="true" />
+          <span>build ledger / 17 entries</span>
+        </div>
+        <h1 className="mt-sm font-display text-display font-semibold tracking-tight text-ink">
+          Seventeen builds, one through-line.
+        </h1>
+        <p className="mt-md text-lead text-ink-2 max-w-[65ch]">
+          From 8-bit AVR assembly to FPGA control loops, IoT electronic noses, and full-stack
+          platforms. Every entry represents authentic hardware, firmware, or software engineered at
+          MSU-IIT.
+        </p>
+      </header>
+
+      {/* ------------------------------------------------------------------
+          2. Category Filters & Search Toolbar
+          ------------------------------------------------------------------ */}
+      <div className="mt-2xl flex flex-col gap-lg border-y border-rule py-md lg:flex-row lg:items-center lg:justify-between">
+        {/* Category Filter Pills with >=44px Hit Target */}
+        <div
+          className="flex flex-wrap items-center gap-xs"
+          role="group"
+          aria-label="Filter builds by category"
+        >
+          {categories.map((category) => {
+            const isActive = activeCategory === category.id
+            const count = categoryCounts[category.id] ?? 0
+
+            return (
+              <button
+                key={category.id}
+                type="button"
+                aria-pressed={isActive}
+                onClick={() => handleCategoryChange(category.id)}
+                className={`pressable inline-flex min-h-[44px] items-center gap-xs rounded-pill border px-md py-xs text-xs font-medium tracking-wide transition-all duration-150 cursor-pointer ${
+                  isActive
+                    ? 'border-accent bg-accent text-accent-ink shadow-sm'
+                    : 'border-rule-2 bg-paper-2 text-ink-2 hover:border-accent hover:text-ink hover:bg-paper-3'
+                }`}
+              >
+                <span>{category.label}</span>
+                <span
+                  className={`inline-flex items-center justify-center rounded-pill px-2xs py-3xs font-mono text-[11px] tabular-nums transition-colors ${
+                    isActive
+                      ? 'bg-paper/20 text-accent-ink font-semibold'
+                      : 'bg-paper-3 text-muted'
+                  }`}
+                >
+                  {count}
+                </span>
+              </button>
+            )
+          })}
+        </div>
+
+        {/* Real-Time Search Box with >=44px Hit Target */}
+        <div className="relative w-full lg:w-80 lg:shrink-0">
+          <label htmlFor="build-search" className="sr-only">
+            Search builds by keyword, stack, or hardware
+          </label>
+          <div className="relative flex items-center">
+            <span
+              className="pointer-events-none absolute left-3.5 text-muted"
+              aria-hidden="true"
+            >
+              <SearchIcon className="h-4 w-4" />
+            </span>
+            <input
+              id="build-search"
+              type="search"
+              value={query}
+              onChange={(event) => handleQueryChange(event.target.value)}
+              placeholder="rtos, fpga, stm32, sensor…"
+              className="h-11 min-h-[44px] w-full rounded-pill border border-rule-2 bg-paper-2 pl-10 pr-10 text-sm text-ink placeholder:text-muted focus:border-accent focus:outline-none transition-colors"
+            />
+            {query && (
+              <button
+                type="button"
+                onClick={() => handleQueryChange('')}
+                aria-label="Clear search query"
+                className="pressable absolute right-1.5 inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-pill text-muted hover:text-ink cursor-pointer"
+              >
+                <ClearIcon className="h-4 w-4" />
+              </button>
+            )}
+          </div>
+        </div>
+      </div>
+
+      {/* ------------------------------------------------------------------
+          3. Quick Filter Suggestions & Result Counter
+          ------------------------------------------------------------------ */}
+      <div className="mt-md flex flex-col gap-sm sm:flex-row sm:items-center sm:justify-between">
+        {/* Results Counter with Tabular Numerals */}
+        <p className="font-mono text-xs text-muted" aria-live="polite">
+          Showing <span className="font-semibold text-ink tabular-nums">{filtered.length}</span>{' '}
+          {filtered.length === 1 ? 'build' : 'builds'}
+          {isFiltered && (
+            <>
+              {' '}of <span className="tabular-nums">{projects.length}</span> total
+            </>
+          )}
+          {query.trim() && (
+            <span>
+              {' '}matching &ldquo;<span className="text-accent-light">{query.trim()}</span>&rdquo;
+            </span>
+          )}
+          {activeCategory !== 'all' && (
+            <span>
+              {' '}in <span className="text-accent-light">{activeCategoryMeta.label}</span>
+            </span>
+          )}
+        </p>
+
+        {/* Quick Filter Suggestion Chips */}
+        <div className="flex flex-wrap items-center gap-2xs">
+          <span className="font-mono text-xs text-muted mr-3xs">Quick:</span>
+          {QUICK_FILTERS.map((tag) => {
+            const isTagActive = query.trim().toLowerCase() === tag.toLowerCase()
+            return (
+              <button
+                key={tag}
+                type="button"
+                onClick={() => handleQueryChange(isTagActive ? '' : tag)}
+                className={`touch-target pressable inline-flex min-h-[44px] items-center rounded-pill border px-xs py-3xs font-mono text-[11px] transition-colors cursor-pointer ${
+                  isTagActive
+                    ? 'border-accent bg-accent/20 text-accent-light'
+                    : 'border-rule bg-paper-2 text-muted hover:border-accent hover:text-ink'
+                }`}
+                aria-pressed={isTagActive}
+              >
+                #{tag}
+              </button>
+            )
+          })}
+
+          {isFiltered && (
+            <button
+              type="button"
+              onClick={handleResetFilters}
+              className="pressable ml-xs inline-flex min-h-[44px] items-center font-mono text-xs text-accent-light hover:underline cursor-pointer"
+            >
+              Clear filters ↺
+            </button>
+          )}
+        </div>
+      </div>
+
+      {/* ------------------------------------------------------------------
+          4. Catalog Grid / Empty State
+          ------------------------------------------------------------------ */}
+      {filtered.length > 0 ? (
+        <div className="mt-lg grid gap-lg sm:grid-cols-2 lg:grid-cols-3">
+          {filtered.map((project, index) => {
+            // Authentic original catalog index preserves permanent build numbering (01-17)
+            const originalIndex = projects.findIndex((p) => p.slug === project.slug)
+            return (
+              <Reveal key={project.slug} delay={Math.min(index, 6) * 40}>
+                <ProjectCard
+                  project={project}
+                  index={originalIndex >= 0 ? originalIndex : index}
+                />
+              </Reveal>
+            )
+          })}
+        </div>
+      ) : (
+        /* ----------------------------------------------------------------
+            5. Clean Cyber-Physical Empty Search State
+            ---------------------------------------------------------------- */
+        <div className="mt-xl rounded-card border border-rule bg-paper-2 p-3xl text-center shadow-card">
+          <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-pill border border-rule-2 bg-paper-3 text-accent-light">
+            <EmptyRadarIcon className="h-7 w-7" />
+          </div>
+
+          <p className="mt-md font-mono text-xs text-accent-light uppercase-tracked">
+            [ STATUS: NO_MATCH ]
+          </p>
+          <h2 className="mt-xs font-display text-title text-ink font-semibold">
+            No matching builds found
+          </h2>
+
+          <p className="mx-auto mt-xs max-w-[65ch] text-sm text-ink-2">
+            No builds in <span className="font-medium text-ink">{activeCategoryMeta.label}</span>{' '}
+            match the query &ldquo;{query.trim()}&rdquo;. Mary Grace&rsquo;s authentic catalog
+            contains 17 builds across embedded systems, IoT sensing, FPGA controllers, and web
+            platforms.
+          </p>
+
+          <div className="mt-lg flex flex-wrap items-center justify-center gap-sm">
+            <button
+              type="button"
+              onClick={handleResetFilters}
+              className="btn btn-primary min-h-[44px] cursor-pointer"
+            >
+              Reset all filters
+            </button>
+            <button
+              type="button"
+              onClick={() => handleCategoryChange('all')}
+              className="btn btn-outline min-h-[44px] cursor-pointer"
+            >
+              View all 17 builds
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}

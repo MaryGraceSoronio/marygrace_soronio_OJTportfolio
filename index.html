@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mary Grace V. Soronio · Embedded Systems, MSU-IIT</title>
+    <meta
+      name="description"
+      content="Mary Grace V. Soronio is a fourth-year embedded systems student at MSU-IIT. Seventeen builds across gas sensing, RTOS firmware, FPGA logic, and full-stack web, plus a 700-hour OJT search."
+    />
+    <meta name="theme-color" content="#0b0612" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <!-- 0ms Zero-FOUC Theme Script: executes synchronously before DOM paint -->
+    <script>
+      (function () {
+        try {
+          var k = 'mg_theme';
+          var s = localStorage.getItem(k);
+          var t;
+          if (s === 'light' || s === 'dark') {
+            t = s;
+          } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+            t = 'light';
+          } else {
+            t = 'dark';
+          }
+          var root = document.documentElement;
+          root.setAttribute('data-theme', t);
+          root.classList.remove('dark', 'light');
+          root.classList.add(t);
+          root.style.colorScheme = t;
+          var m = document.querySelector('meta[name="theme-color"]');
+          if (m) m.setAttribute('content', t === 'light' ? '#faf8fd' : '#0b0612');
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Onest:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <div style="max-width: 40rem; margin: 4rem auto; padding: 0 1.5rem">
+        <h1 style="font-size: 1.75rem">Mary Grace V. Soronio</h1>
+        <p>
+          Fourth-year embedded systems student at MSU-IIT. I build the device and the dashboard:
+          seventeen projects from gas sensors and AVR assembly to React and Laravel.
+        </p>
+        <p>
+          Email
+          <a href="mailto:marygrace.soronio@g.msuiit.edu.ph">marygrace.soronio@g.msuiit.edu.ph</a>,
+          phone <a href="tel:+639660434042">+63 966 043 4042</a>, or find the work on
+          <a href="https://github.com/MaryGraceSoronio">github.com/MaryGraceSoronio</a>.
+        </p>
+      </div>
+    </noscript>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

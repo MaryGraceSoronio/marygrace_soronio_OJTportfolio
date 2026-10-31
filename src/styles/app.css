@@ -1,0 +1,674 @@
+/* ==========================================================================
+   Mary Grace V. Soronio Developer Portfolio — Design System
+   Architecture: Tailwind CSS v4 @theme + CSS Custom Properties Dual-Tier
+   Aesthetic: Cyber-Physical Engineering (Dark Purple Primary & Paper Light)
+   Standards: Emil Kowalski Design Engineering & Impeccable Typography
+   ========================================================================== */
+
+@import "tailwindcss";
+
+/* --------------------------------------------------------------------------
+   1. Dynamic Theme Tokens (CSS Custom Properties)
+   -------------------------------------------------------------------------- */
+:root,
+[data-theme="dark"],
+.dark {
+  color-scheme: dark;
+
+  /* Dark Purple Primary Palette */
+  --theme-paper: #0b0612;             /* Deep obsidian-plum canvas */
+  --theme-paper-2: #12091f;           /* Primary surface / card background */
+  --theme-paper-3: #1a0d2e;           /* Elevated surface / popovers / pills */
+  --theme-paper-4: #24123f;           /* Active / hovered surface */
+
+  /* Hairline Borders */
+  --theme-rule: rgba(186, 147, 245, 0.12);   /* Subtle 1px hairline border */
+  --theme-rule-2: rgba(186, 147, 245, 0.24); /* Defined border / active tab */
+
+  /* High-Contrast Typography */
+  --theme-ink: #f5f2fb;               /* 15.6:1 WCAG AAA Primary Text */
+  --theme-ink-2: #c4b5fd;             /* 8.7:1 WCAG AAA Secondary Text */
+  --theme-muted: #9e8bb8;             /* 5.1:1 WCAG AA Muted / Metadata Text */
+
+  /* Electric Violet & Radiant Accents */
+  --theme-accent: #9d4edd;            /* Electric violet primary accent */
+  --theme-accent-hover: #a855f7;      /* Radiant amethyst hover */
+  --theme-accent-deep: #7b2cbf;       /* Deep violet active state */
+  --theme-accent-soft: rgba(157, 78, 221, 0.15); /* Translucent pill background */
+  --theme-accent-soft-hover: rgba(157, 78, 221, 0.25);
+  --theme-accent-ink: #ffffff;        /* High-contrast ink on accent fill */
+  --theme-accent-light: #c084fc;      /* Focus rings and glowing highlights */
+  --theme-tint: rgba(157, 78, 221, 0.22);
+  --theme-glow: rgba(157, 78, 221, 0.25);
+
+  /* Contact / Callout Band */
+  --theme-band: #160a2b;
+  --theme-band-ink: #f5f2fb;
+
+  /* Elevation Shadows */
+  --theme-shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.6), 0 0 1px 1px rgba(186, 147, 245, 0.12);
+  --theme-shadow-elevated: 0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 0 1px 1px rgba(186, 147, 245, 0.18);
+}
+
+[data-theme="light"],
+.light {
+  color-scheme: light;
+
+  /* Light Theme Paper Palette */
+  --theme-paper: #faf8fd;             /* Crisp violet-tinted paper canvas */
+  --theme-paper-2: #ffffff;           /* Pure white elevated card surfaces */
+  --theme-paper-3: #f3eef9;           /* Soft violet-gray secondary box / pill */
+  --theme-paper-4: #eae2f5;           /* Hovered light surface */
+
+  /* Hairline Borders */
+  --theme-rule: rgba(124, 58, 237, 0.10);   /* Subtle 1px violet hairline */
+  --theme-rule-2: rgba(124, 58, 237, 0.22); /* Defined border / active tab */
+
+  /* High-Contrast Typography */
+  --theme-ink: #150d24;               /* 15.2:1 WCAG AAA Indigo-plum ink */
+  --theme-ink-2: #3c2a5c;             /* 9.8:1 WCAG AAA Secondary Text */
+  --theme-muted: #6b5b82;             /* 5.2:1 WCAG AA Muted Text */
+
+  /* Interactive Violet Accents */
+  --theme-accent: #7c3aed;            /* Deep royal violet primary accent */
+  --theme-accent-hover: #6d28d9;      /* Focused violet hover */
+  --theme-accent-deep: #5b21b6;       /* Active state deep violet */
+  --theme-accent-soft: rgba(124, 58, 237, 0.08); /* Translucent pill background */
+  --theme-accent-soft-hover: rgba(124, 58, 237, 0.16);
+  --theme-accent-ink: #ffffff;        /* High-contrast ink on accent fill */
+  --theme-accent-light: #8b5cf6;      /* Focus rings and highlights */
+  --theme-tint: rgba(124, 58, 237, 0.12);
+  --theme-glow: rgba(124, 58, 237, 0.15);
+
+  /* Contact / Callout Band */
+  --theme-band: #f0e9f8;
+  --theme-band-ink: #150d24;
+
+  /* Elevation Shadows */
+  --theme-shadow-card: 0 10px 25px -5px rgba(21, 13, 36, 0.06), 0 0 1px 1px rgba(124, 58, 237, 0.10);
+  --theme-shadow-elevated: 0 20px 35px -10px rgba(21, 13, 36, 0.12), 0 0 1px 1px rgba(124, 58, 237, 0.16);
+}
+
+/* Backward-Compatible Direct CSS Custom Property Bridge */
+:root {
+  --color-paper: var(--theme-paper);
+  --color-paper-2: var(--theme-paper-2);
+  --color-paper-3: var(--theme-paper-3);
+  --color-paper-4: var(--theme-paper-4);
+  --color-ink: var(--theme-ink);
+  --color-ink-2: var(--theme-ink-2);
+  --color-muted: var(--theme-muted);
+  --color-rule: var(--theme-rule);
+  --color-rule-2: var(--theme-rule-2);
+  --color-accent: var(--theme-accent);
+  --color-accent-hover: var(--theme-accent-hover);
+  --color-accent-deep: var(--theme-accent-deep);
+  --color-accent-soft: var(--theme-accent-soft);
+  --color-accent-soft-hover: var(--theme-accent-soft-hover);
+  --color-accent-ink: var(--theme-accent-ink);
+  --color-accent-light: var(--theme-accent-light);
+  --color-tint: var(--theme-tint);
+  --color-band: var(--theme-band);
+  --color-band-ink: var(--theme-band-ink);
+  --color-glow: var(--theme-glow);
+}
+
+/* --------------------------------------------------------------------------
+   2. Tailwind v4 @theme Declaration
+   -------------------------------------------------------------------------- */
+@theme {
+  /* Color utilities (bg-paper, text-ink, border-rule, bg-accent, etc.) */
+  --color-paper: var(--theme-paper);
+  --color-paper-2: var(--theme-paper-2);
+  --color-paper-3: var(--theme-paper-3);
+  --color-paper-4: var(--theme-paper-4);
+  --color-ink: var(--theme-ink);
+  --color-ink-2: var(--theme-ink-2);
+  --color-muted: var(--theme-muted);
+  --color-rule: var(--theme-rule);
+  --color-rule-2: var(--theme-rule-2);
+  --color-accent: var(--theme-accent);
+  --color-accent-hover: var(--theme-accent-hover);
+  --color-accent-deep: var(--theme-accent-deep);
+  --color-accent-soft: var(--theme-accent-soft);
+  --color-accent-soft-hover: var(--theme-accent-soft-hover);
+  --color-accent-ink: var(--theme-accent-ink);
+  --color-accent-light: var(--theme-accent-light);
+  --color-tint: var(--theme-tint);
+  --color-band: var(--theme-band);
+  --color-band-ink: var(--theme-band-ink);
+  --color-glow: var(--theme-glow);
+
+  /* Typography Fonts */
+  --font-display: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: "Onest", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Optical Radius Hierarchy (Concentric outer/inner) */
+  --radius-card: 16px;
+  --radius-card-sm: 12px;
+  --radius-card-inner: 10px; /* r_inner = r_outer - padding */
+  --radius-pill: 999px;
+
+  /* Layout Container */
+  --container-page: 1440px;
+
+  /* Restore Tailwind's container scale. The custom --spacing-sm/2xl/3xl tokens
+     above share those names, which otherwise makes max-w-sm resolve to 12px
+     and max-w-2xl to 48px. */
+  --container-xs: 20rem;
+  --container-sm: 24rem;
+  --container-md: 28rem;
+  --container-lg: 32rem;
+  --container-xl: 36rem;
+  --container-2xl: 42rem;
+  --container-3xl: 48rem;
+  --container-4xl: 56rem;
+  --container-5xl: 64rem;
+  --container-6xl: 72rem;
+  --container-7xl: 80rem;
+
+  /* Elevation */
+  --shadow-card: var(--theme-shadow-card);
+  --shadow-elevated: var(--theme-shadow-elevated);
+
+  /* Fluid Clamp Typography Scale */
+  --text-display: clamp(2.75rem, 5.6vw, 5.25rem);
+  --text-display--line-height: 0.96;
+  --text-display-s: clamp(2.25rem, 4vw, 3.75rem);
+  --text-display-s--line-height: 1;
+  --text-section: clamp(2rem, 3.4vw, 3.25rem);
+  --text-section--line-height: 1.02;
+  --text-title: 1.5625rem;
+  --text-title--line-height: 1.15;
+  --text-lead: 1.3125rem;
+  --text-lead--line-height: 1.45;
+  --text-md: 1rem;
+  --text-md--line-height: 1.6;
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.5;
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1.4;
+
+  /* Strict 4px/8px Spacing Scale */
+  --spacing-3xs: 2px;
+  --spacing-2xs: 4px;
+  --spacing-xs: 8px;
+  --spacing-sm: 12px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-col: 32px;
+  --spacing-xl: 40px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+  --spacing-4xl: 96px;
+  --spacing-5xl: 144px;
+  --spacing-6xl: 176px;
+}
+
+/* --------------------------------------------------------------------------
+   3. Base Element Styling & Design Rules
+   -------------------------------------------------------------------------- */
+@layer base {
+  html {
+    overflow-x: clip;
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--spacing-4xl);
+    scrollbar-color: var(--color-rule-2) var(--color-paper);
+    caret-color: var(--color-accent);
+    transition: background-color 200ms ease, color 200ms ease;
+  }
+
+  body {
+    overflow-x: clip;
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    font-size: var(--text-md);
+    line-height: 1.6;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 200ms ease, color 200ms ease;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+    overflow-wrap: break-word;
+    min-width: 0;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Emil Kowalski Line Measure: Never exceed 65ch */
+  p, li, dd {
+    max-width: 65ch;
+  }
+
+  /* Tabular Numerals: Guaranteed vertical alignment for data & metrics */
+  .tabular-nums,
+  time,
+  [data-tabular],
+  .metric-value {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Visible, Accessible Keyboard Focus Rings */
+  :focus-visible {
+    outline: 2px solid var(--color-accent-light);
+    outline-offset: 3px;
+    border-radius: var(--radius-pill);
+  }
+
+  /* Branded Selection Highlight */
+  ::selection {
+    background-color: color-mix(in oklab, var(--color-accent) 35%, transparent);
+    color: var(--color-accent-ink);
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Full Reduced Motion Accessibility Override */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. Component Recipes & Utilities
+   -------------------------------------------------------------------------- */
+@layer components {
+  /* Global Page Shell Container */
+  .shell {
+    width: 100%;
+    max-width: var(--container-page);
+    margin-inline: auto;
+    padding-inline: var(--spacing-lg);
+  }
+
+  @media (min-width: 48rem) {
+    .shell {
+      padding-inline: var(--spacing-3xl);
+    }
+  }
+
+  /* Tactile Button Base with 44px Minimum Hit Area */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    height: 48px;
+    padding-inline: var(--spacing-lg);
+    border-radius: var(--radius-pill);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+    transition:
+      background-color 150ms ease,
+      color 150ms ease,
+      border-color 150ms ease,
+      transform 100ms ease;
+  }
+
+  /* Tactile Button Active Compression */
+  .btn:active,
+  .pressable:active,
+  button:not(:disabled):active,
+  [role="button"]:active {
+    transform: scale(0.97);
+  }
+
+  /* Button Variations */
+  .btn-primary {
+    background-color: var(--btn-face, var(--color-accent));
+    color: var(--btn-ink, var(--color-accent-ink));
+    box-shadow: 0 4px 14px -2px var(--color-glow);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--btn-face-hover, var(--color-accent-hover));
+    color: var(--btn-ink-hover, var(--color-accent-ink));
+  }
+
+  .btn-outline {
+    border: 1px solid var(--color-rule-2);
+    background-color: transparent;
+    color: var(--color-ink-2);
+  }
+
+  .btn-outline:hover {
+    border-color: var(--color-accent);
+    color: var(--color-ink);
+    background-color: var(--color-paper-3);
+  }
+
+  /* Contact section special button pill coloring */
+  #contact {
+    --btn-face: var(--color-accent-ink);
+    --btn-ink: var(--color-accent);
+    --btn-face-hover: var(--color-accent-soft);
+    --btn-ink-hover: var(--color-accent-ink);
+  }
+
+  /* Hero Board Aspect Ratio Frame */
+  .hero-board-frame {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--color-rule);
+    border-radius: var(--radius-card);
+    box-shadow: var(--theme-shadow-card);
+  }
+
+  .hero-board {
+    aspect-ratio: 4 / 5;
+    max-height: calc(100dvh - 12rem);
+    transition: transform 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .hero-board-frame:hover .hero-board {
+    transform: scale(1.02);
+  }
+
+  .hero-board-frame::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--color-tint);
+    mix-blend-mode: color;
+    opacity: 0.25;
+    pointer-events: none;
+  }
+
+  /* Skip Link for Accessibility */
+  .skip {
+    position: absolute;
+    top: var(--spacing-lg);
+    left: var(--spacing-lg);
+    z-index: 100;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: var(--radius-pill);
+    background-color: var(--color-accent-ink);
+    color: var(--color-paper);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    transform: translateY(-250%);
+    transition: transform 150ms ease;
+  }
+
+  .skip:focus-visible {
+    transform: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   5. Emil Kowalski Micro-Interaction & Hit-Target Utilities
+   -------------------------------------------------------------------------- */
+@layer utilities {
+  /* 44x44px Click Target Guarantee via Pseudo-Element */
+  .touch-target {
+    position: relative;
+  }
+  .touch-target::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 44px;
+    min-height: 44px;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Direct Hit Target Dimension Enforcement */
+  .min-tap {
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Uppercase Tracking Expansion */
+  .uppercase-tracked {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  /* Emil Kowalski Snappy Entrances (<=250ms, scale(0.96) -> scale(1)) */
+  @keyframes snappy-settle {
+    from {
+      opacity: 0;
+      transform: translateY(8px) scale(0.96);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  .settle {
+    animation: snappy-settle 240ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .settle-2 {
+    animation: snappy-settle 240ms cubic-bezier(0.16, 1, 0.3, 1) 50ms both;
+  }
+
+  .settle-3 {
+    animation: snappy-settle 240ms cubic-bezier(0.16, 1, 0.3, 1) 100ms both;
+  }
+
+  /* ------------------------------------------------------------------------
+     Multi-page shell: ambient canvas, route transitions, scroll reveals
+     ------------------------------------------------------------------------ */
+
+  #root {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .ambient-canvas {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0.55;
+  }
+
+  @keyframes page-in {
+    0% {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .page-enter {
+    animation: page-in 200ms cubic-bezier(0.16, 1, 0.3, 1) both;
+    will-change: opacity, transform;
+  }
+
+  .reveal,
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(8px);
+    transition:
+      opacity 250ms cubic-bezier(0.16, 1, 0.3, 1),
+      transform 250ms cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform, opacity;
+  }
+
+  .reveal.is-shown,
+  .scroll-reveal.is-shown {
+    opacity: 1;
+    transform: none;
+  }
+
+  @keyframes signal-pulse {
+    0%,
+    100% {
+      transform: scaleY(0.32);
+      opacity: 0.5;
+    }
+    50% {
+      transform: scaleY(1);
+      opacity: 1;
+    }
+  }
+
+  .signal-bar {
+    flex: 1 1 0;
+    min-width: 2px;
+    transform-origin: bottom;
+    border-radius: 1px;
+    background-color: color-mix(in oklab, var(--color-accent-light) 60%, transparent);
+    animation: signal-pulse 2600ms ease-in-out infinite;
+  }
+
+  /* The one inverted button recipe, used on the violet band. */
+  .btn-invert {
+    background-color: var(--color-band-ink);
+    color: var(--color-band);
+    box-shadow: 0 4px 18px -6px rgba(0, 0, 0, 0.35);
+  }
+
+  .btn-invert:hover {
+    background-color: var(--color-accent);
+    color: var(--color-accent-ink);
+  }
+
+  /* --------------------------------------------------------------------------
+     Tech Marquee & Skeleton Shimmer Animations
+     -------------------------------------------------------------------------- */
+  @keyframes marquee {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+
+  @keyframes marquee-reverse {
+    from {
+      transform: translate3d(-50%, 0, 0);
+    }
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .animate-marquee {
+    display: flex;
+    width: max-content;
+    will-change: transform;
+    animation: marquee 32s linear infinite;
+  }
+
+  .animate-marquee-reverse {
+    display: flex;
+    width: max-content;
+    will-change: transform;
+    animation: marquee-reverse 32s linear infinite;
+  }
+
+  .pause-on-hover:hover .animate-marquee,
+  .pause-on-hover:hover .animate-marquee-reverse {
+    animation-play-state: paused;
+  }
+
+  .mask-gradient-x {
+    mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  }
+
+  @keyframes shimmer-sweep {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  .skeleton-shimmer {
+    background: linear-gradient(
+      90deg,
+      var(--theme-paper-3) 0%,
+      var(--theme-paper-4) 50%,
+      var(--theme-paper-3) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer-sweep 1800ms ease-in-out infinite;
+  }
+
+  .scroll-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    z-index: 60;
+    transform-origin: left;
+    background: linear-gradient(90deg, var(--color-accent), var(--color-accent-light));
+    box-shadow: 0 0 10px var(--color-accent);
+    pointer-events: none;
+    transition: transform 75ms ease-out;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ambient-canvas,
+    .signal-bar {
+      display: none !important;
+    }
+
+    .animate-marquee,
+    .animate-marquee-reverse,
+    .skeleton-shimmer {
+      animation: none !important;
+    }
+
+    .page-enter,
+    .reveal,
+    .scroll-reveal {
+      animation: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+  }
+}

@@ -1,0 +1,379 @@
+- generic [ref=e2]:
+  - link "skip to the work" [ref=e3] [cursor=pointer]:
+    - /url: "#work"
+  - banner [ref=e4]:
+    - generic [ref=e6]:
+      - link "Mary Grace V. Soronio [embedded engineer]" [ref=e7] [cursor=pointer]:
+        - /url: "#top"
+        - generic [ref=e8]: Mary Grace V. Soronio
+        - generic [ref=e9]: "[embedded engineer]"
+      - generic [ref=e10]:
+        - navigation "Sections" [ref=e11]:
+          - link "work" [ref=e12] [cursor=pointer]:
+            - /url: "#work"
+          - link "thesis" [ref=e13] [cursor=pointer]:
+            - /url: "#about"
+          - link "training" [ref=e14] [cursor=pointer]:
+            - /url: "#training"
+          - link "contact" [ref=e15] [cursor=pointer]:
+            - /url: "#contact"
+        - link "email me" [ref=e16] [cursor=pointer]:
+          - /url: mailto:marygrace.soronio@g.msuiit.edu.ph
+  - main [ref=e17]:
+    - generic [ref=e19]:
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - generic [ref=e25]: AVAILABLE FOR 700-HOUR OJT
+          - generic [ref=e26]: ·
+          - generic [ref=e27]: ILIGAN CITY
+        - heading "a board that plays fur elise" [level=1] [ref=e28]
+        - paragraph [ref=e29]: Fourth-year embedded systems student, MSU-IIT. I build the physical device and the digital telemetry dashboard.
+        - generic [ref=e30]:
+          - link "see the work" [ref=e31] [cursor=pointer]:
+            - /url: "#work"
+          - link "github ↗" [ref=e32] [cursor=pointer]:
+            - /url: https://github.com/MaryGraceSoronio
+          - link "inquire for ojt" [ref=e33] [cursor=pointer]:
+            - /url: mailto:marygrace.soronio@g.msuiit.edu.ph
+      - 'figure "BOARD TELEMETRY: the mp3 player with stm32f407, es8388 codec, freertos audio streams, and track list on oled." [ref=e34]':
+        - img "The STM32F407 board I built the MP3 player on, its OLED still lit, with the ES8388 codec and the audio jacks in frame." [ref=e36]
+    - generic [ref=e38]:
+      - generic [ref=e39]:
+        - generic [ref=e40]:
+          - generic [ref=e41]:
+            - heading "silicon to screen" [level=2] [ref=e42]
+            - paragraph [ref=e43]: Sixteen builds and a thesis still running.
+          - generic [ref=e44]:
+            - button "all builds" [ref=e45]
+            - button "embedded & rtos" [ref=e46]
+            - button "sensing & iot" [ref=e47]
+            - button "fpga & pcb" [ref=e48]
+            - button "web & systems" [ref=e49]
+        - generic [ref=e50]:
+          - list [ref=e51]:
+            - listitem [ref=e52]:
+              - button "01 fermonitor ml, gas sensing, raspberry pi Inspect fermonitor" [ref=e53] [cursor=pointer]:
+                - generic [ref=e54]:
+                  - generic [ref=e55]: "01"
+                  - generic [ref=e56]: fermonitor
+                - generic [ref=e57]:
+                  - generic [ref=e58]: ml, gas sensing, raspberry pi
+                  - button "Inspect fermonitor" [ref=e59]: ↗
+            - listitem [ref=e60]:
+              - button "02 etee atmega2560, esp32, yolo Inspect etee" [ref=e61] [cursor=pointer]:
+                - generic [ref=e62]:
+                  - generic [ref=e63]: "02"
+                  - generic [ref=e64]: etee
+                - generic [ref=e65]:
+                  - generic [ref=e66]: atmega2560, esp32, yolo
+                  - button "Inspect etee" [ref=e67]: ↗
+            - listitem [ref=e68]:
+              - button "03 aquaflush arduino, interrupts, i²c Inspect aquaflush" [ref=e69] [cursor=pointer]:
+                - generic [ref=e70]:
+                  - generic [ref=e71]: "03"
+                  - generic [ref=e72]: aquaflush
+                - generic [ref=e73]:
+                  - generic [ref=e74]: arduino, interrupts, i²c
+                  - button "Inspect aquaflush" [ref=e75]: ↗
+            - listitem [ref=e76]:
+              - button "04 room monitor stm32, freertos, wokwi Inspect room monitor" [ref=e77] [cursor=pointer]:
+                - generic [ref=e78]:
+                  - generic [ref=e79]: "04"
+                  - generic [ref=e80]: room monitor
+                - generic [ref=e81]:
+                  - generic [ref=e82]: stm32, freertos, wokwi
+                  - button "Inspect room monitor" [ref=e83]: ↗
+            - listitem [ref=e84]:
+              - button "05 drying oven codesys, verilog, rt-thread Inspect drying oven" [ref=e85] [cursor=pointer]:
+                - generic [ref=e86]:
+                  - generic [ref=e87]: "05"
+                  - generic [ref=e88]: drying oven
+                - generic [ref=e89]:
+                  - generic [ref=e90]: codesys, verilog, rt-thread
+                  - button "Inspect drying oven" [ref=e91]: ↗
+            - listitem [ref=e92]:
+              - button "06 rt-thread hmi lvgl, squareline, ra6m3 Inspect rt-thread hmi" [ref=e93] [cursor=pointer]:
+                - generic [ref=e94]:
+                  - generic [ref=e95]: "06"
+                  - generic [ref=e96]: rt-thread hmi
+                - generic [ref=e97]:
+                  - generic [ref=e98]: lvgl, squareline, ra6m3
+                  - button "Inspect rt-thread hmi" [ref=e99]: ↗
+            - listitem [ref=e100]:
+              - button "07 fpga oven vhdl, vivado, one-hot fsm Inspect fpga oven" [ref=e101] [cursor=pointer]:
+                - generic [ref=e102]:
+                  - generic [ref=e103]: "07"
+                  - generic [ref=e104]: fpga oven
+                - generic [ref=e105]:
+                  - generic [ref=e106]: vhdl, vivado, one-hot fsm
+                  - button "Inspect fpga oven" [ref=e107]: ↗
+            - listitem [ref=e108]:
+              - button "08 12v supply pcb layout, rectification, soldering Inspect 12v supply" [ref=e109] [cursor=pointer]:
+                - generic [ref=e110]:
+                  - generic [ref=e111]: "08"
+                  - generic [ref=e112]: 12v supply
+                - generic [ref=e113]:
+                  - generic [ref=e114]: pcb layout, rectification, soldering
+                  - button "Inspect 12v supply" [ref=e115]: ↗
+            - listitem [ref=e116]:
+              - button "09 line robot avr assembly, atmega328p, pwm Inspect line robot" [ref=e117] [cursor=pointer]:
+                - generic [ref=e118]:
+                  - generic [ref=e119]: "09"
+                  - generic [ref=e120]: line robot
+                - generic [ref=e121]:
+                  - generic [ref=e122]: avr assembly, atmega328p, pwm
+                  - button "Inspect line robot" [ref=e123]: ↗
+            - listitem [ref=e124]:
+              - button "10 mp3 player stm32f407, es8388, freertos Inspect mp3 player" [ref=e125] [cursor=pointer]:
+                - generic [ref=e126]:
+                  - generic [ref=e127]: "10"
+                  - generic [ref=e128]: mp3 player
+                - generic [ref=e129]:
+                  - generic [ref=e130]: stm32f407, es8388, freertos
+                  - button "Inspect mp3 player" [ref=e131]: ↗
+            - listitem [ref=e132]:
+              - button "11 keyboard detection edge impulse, bounding boxes Inspect keyboard detection" [ref=e133] [cursor=pointer]:
+                - generic [ref=e134]:
+                  - generic [ref=e135]: "11"
+                  - generic [ref=e136]: keyboard detection
+                - generic [ref=e137]:
+                  - generic [ref=e138]: edge impulse, bounding boxes
+                  - button "Inspect keyboard detection" [ref=e139]: ↗
+            - listitem [ref=e140]:
+              - button "12 activity recognition rt-spark, feature extraction Inspect activity recognition" [ref=e141] [cursor=pointer]:
+                - generic [ref=e142]:
+                  - generic [ref=e143]: "12"
+                  - generic [ref=e144]: activity recognition
+                - generic [ref=e145]:
+                  - generic [ref=e146]: rt-spark, feature extraction
+                  - button "Inspect activity recognition" [ref=e147]: ↗
+            - listitem [ref=e148]:
+              - button "13 ricedirect qt, c++, qml, iot Inspect ricedirect" [ref=e149] [cursor=pointer]:
+                - generic [ref=e150]:
+                  - generic [ref=e151]: "13"
+                  - generic [ref=e152]: ricedirect
+                - generic [ref=e153]:
+                  - generic [ref=e154]: qt, c++, qml, iot
+                  - button "Inspect ricedirect" [ref=e155]: ↗
+            - listitem [ref=e156]:
+              - button "14 digistamp react, express, mongodb Inspect digistamp" [ref=e157] [cursor=pointer]:
+                - generic [ref=e158]:
+                  - generic [ref=e159]: "14"
+                  - generic [ref=e160]: digistamp
+                - generic [ref=e161]:
+                  - generic [ref=e162]: react, express, mongodb
+                  - button "Inspect digistamp" [ref=e163]: ↗
+            - listitem [ref=e164]:
+              - button "15 contribution tracker role-based access, analytics, pdf reports Inspect contribution tracker" [ref=e165] [cursor=pointer]:
+                - generic [ref=e166]:
+                  - generic [ref=e167]: "15"
+                  - generic [ref=e168]: contribution tracker
+                - generic [ref=e169]:
+                  - generic [ref=e170]: role-based access, analytics, pdf reports
+                  - button "Inspect contribution tracker" [ref=e171]: ↗
+            - listitem [ref=e172]:
+              - button "16 campuslink mobile, mongodb, role-based access Inspect campuslink" [ref=e173] [cursor=pointer]:
+                - generic [ref=e174]:
+                  - generic [ref=e175]: "16"
+                  - generic [ref=e176]: campuslink
+                - generic [ref=e177]:
+                  - generic [ref=e178]: mobile, mongodb, role-based access
+                  - button "Inspect campuslink" [ref=e179]: ↗
+            - listitem [ref=e180]:
+              - button "17 qr attendance laravel api, qr, figma Inspect qr attendance" [ref=e181] [cursor=pointer]:
+                - generic [ref=e182]:
+                  - generic [ref=e183]: "17"
+                  - generic [ref=e184]: qr attendance
+                - generic [ref=e185]:
+                  - generic [ref=e186]: laravel api, qr, figma
+                  - button "Inspect qr attendance" [ref=e187]: ↗
+          - complementary [ref=e188]:
+            - generic [ref=e189]:
+              - generic [ref=e190]:
+                - 'img "fermonitor: An electronic nose that reads bagoong fermentation from the gas above the pail." [ref=e191]'
+                - button "inspect details ↗" [active] [ref=e192]:
+                  - generic [ref=e193]: inspect details
+                  - generic [ref=e194]: ↗
+              - generic [ref=e195]:
+                - generic [ref=e196]:
+                  - heading "fermonitor" [level=3] [ref=e197]
+                  - button "open spec sheet" [ref=e198]
+                - paragraph [ref=e199]: ml, gas sensing, raspberry pi
+                - paragraph [ref=e200]: An electronic nose that reads bagoong fermentation from the gas above the pail.
+                - paragraph [ref=e201]: the thesis, so nothing public yet
+      - dialog "fermonitor" [ref=e361]:
+        - generic [ref=e363]:
+          - generic [ref=e364]:
+            - generic [ref=e365]:
+              - generic [ref=e366]: project inspection
+              - generic [ref=e367]: /
+              - generic [ref=e368]: iot
+            - button "Close dialog" [ref=e369]
+          - img "fermonitor" [ref=e373]
+          - generic [ref=e374]:
+            - heading "fermonitor" [level=2]
+            - paragraph: ml, gas sensing, raspberry pi
+            - paragraph: An electronic nose that reads bagoong fermentation from the gas above the pail.
+            - generic:
+              - heading "Architecture & Engineering Notes" [level=4]
+              - paragraph: Electronic nose system monitoring traditional fermentation. Integrates 4 gas sensor channels (MQ-135, MQ-136, MQ-137, and NDIR CO2) sampled through a 16-bit ADS1115 ADC. Features continuous windowed inference on Raspberry Pi with local SQLite logging and Firebase synchronization.
+            - generic: the thesis, so nothing public yet
+    - generic [ref=e203]:
+      - generic [ref=e204]:
+        - generic [ref=e205]:
+          - generic [ref=e206]: THESIS SPECIFICATION · FERMONITOR
+          - heading "the nose that reads bagoong" [level=2] [ref=e209]
+        - paragraph [ref=e210]: My undergraduate thesis. I designed the gas sampling chamber, wrote the deterministic signal acquisition loop, and built the live verification console below.
+      - 'figure "Live electronic nose telemetry dashboard displaying batch classification STATUS: SAFE TO EAT" [ref=e211]':
+        - img "FERMONITOR’s Food Safety Status panel reading SAFE TO EAT, with the model’s pH, temperature and gas readings all stable." [ref=e213]
+        - generic [ref=e214]:
+          - generic [ref=e215]: Live electronic nose telemetry dashboard displaying batch classification
+          - generic [ref=e216]: "STATUS: SAFE TO EAT"
+      - generic [ref=e217]:
+        - generic [ref=e218]:
+          - term [ref=e219]:
+            - generic [ref=e220]: sensing array
+          - definition [ref=e221]: MQ-137 (Ammonia), MQ-136 (H₂S), MQ-135 (Air Quality), NDIR optical CO₂ channel
+          - generic [ref=e222]: CH01 - CH04
+        - generic [ref=e223]:
+          - term [ref=e224]:
+            - generic [ref=e225]: signal chain
+          - definition [ref=e226]: Precision ADS1115 analog-to-digital converter over isolated I²C bus
+          - generic [ref=e227]: 16-BIT ADC
+        - generic [ref=e228]:
+          - term [ref=e229]:
+            - generic [ref=e230]: compute stack
+          - definition [ref=e231]: "Raspberry Pi 4B: deterministic local sampling, on-device SQLite buffer, Firebase cloud telemetry"
+          - generic [ref=e232]: EDGE SBC
+        - generic [ref=e233]:
+          - term [ref=e234]:
+            - generic [ref=e235]: inference model
+          - definition [ref=e236]: 10-minute gas evolution windows mapped into a 22-feature statistical vector
+          - generic [ref=e237]: ML PIPELINE
+        - generic [ref=e238]:
+          - term [ref=e239]:
+            - generic [ref=e240]: classification
+          - definition [ref=e241]: "Instant safety classification: Fresh / Active Fermentation / Spoilage Alert"
+          - generic [ref=e242]: REAL-TIME VERDICT
+      - generic [ref=e243]:
+        - paragraph [ref=e244]: BS Computer Applications, major in Embedded Systems, MSU-IIT
+        - paragraph [ref=e245]: "CGPA: 1.67351 · DEAN’S LISTER"
+    - generic [ref=e247]:
+      - heading "the tools behind sixteen builds" [level=2] [ref=e248]
+      - generic [ref=e249]:
+        - generic [ref=e250]:
+          - term [ref=e251]: languages
+          - definition [ref=e252]:
+            - generic [ref=e253]: C
+            - generic [ref=e254]: C++
+            - generic [ref=e255]: Python
+            - generic [ref=e256]: Java
+            - generic [ref=e257]: Verilog HDL
+            - generic [ref=e258]: PLC
+        - generic [ref=e259]:
+          - term [ref=e260]: hardware
+          - definition [ref=e261]:
+            - generic [ref=e262]: ESP32
+            - generic [ref=e263]: STM32
+            - generic [ref=e264]: Arduino
+            - generic [ref=e265]: PCB layout
+            - generic [ref=e266]: sensor interfacing
+        - generic [ref=e267]:
+          - term [ref=e268]: web
+          - definition [ref=e269]:
+            - generic [ref=e270]: React
+            - generic [ref=e271]: Laravel
+            - generic [ref=e272]: PHP
+            - generic [ref=e273]: JavaScript
+            - generic [ref=e274]: HTML
+        - generic [ref=e275]:
+          - term [ref=e276]: tools
+          - definition [ref=e277]:
+            - generic [ref=e278]: VS Code
+            - generic [ref=e279]: Vivado
+            - generic [ref=e280]: RT-Thread Studio
+            - generic [ref=e281]: CODESYS
+            - generic [ref=e282]: Qt Creator
+            - generic [ref=e283]: Wokwi
+            - generic [ref=e284]: Edge Impulse
+    - generic [ref=e286]:
+      - heading "council, classroom, camera" [level=2] [ref=e287]
+      - list [ref=e288]:
+        - listitem [ref=e289]:
+          - heading "Budget and finance undersecretary" [level=3] [ref=e290]
+          - paragraph [ref=e291]: CCS student council, MSU-IIT
+          - paragraph [ref=e292]: aug 2025 to jul 2026
+        - listitem [ref=e293]:
+          - heading "Budget and finance associate" [level=3] [ref=e294]
+          - paragraph [ref=e295]: CCS executive council, MSU-IIT
+          - paragraph [ref=e296]: aug 2024 to jul 2025
+        - listitem [ref=e297]:
+          - heading "Executive secretary" [level=3] [ref=e298]
+          - paragraph [ref=e299]: Computer Applications Society
+          - paragraph [ref=e300]: aug 2023 to may 2024
+        - listitem [ref=e301]:
+          - heading "ESL teacher" [level=3] [ref=e302]
+          - paragraph [ref=e303]: Native Camp, remote, Japan
+          - paragraph [ref=e304]: jun 2025 to now
+        - listitem [ref=e305]:
+          - heading "Freelance video editor" [level=3] [ref=e306]
+          - paragraph [ref=e307]: YouTube automation, remote
+          - paragraph [ref=e308]: oct 2024 to jun 2025
+    - generic [ref=e310]:
+      - heading "five sessions, one thesis year" [level=2] [ref=e311]
+      - list [ref=e312]:
+        - listitem [ref=e313]:
+          - heading "AI career readiness training" [level=3] [ref=e314]
+          - paragraph [ref=e315]: AI Ready ASEAN, MSU-IIT
+          - paragraph [ref=e316]: aug 2026
+        - listitem [ref=e317]:
+          - 'heading "Quantum circuits as pictures: an introduction to ZX calculus" [level=3] [ref=e318]'
+          - paragraph [ref=e319]: Quantum Computing Society of the Philippines
+          - paragraph [ref=e320]: mar 2026
+        - listitem [ref=e321]:
+          - heading "Embedded systems programming using the RT-Thread IoT OS" [level=3] [ref=e322]
+          - paragraph [ref=e323]: RT-Thread, CCS, MSU-IIT
+          - paragraph [ref=e324]: nov 2025
+        - listitem [ref=e325]:
+          - 'heading "Seize your opportunity: an OJT preparation workshop" [level=3] [ref=e326]'
+          - paragraph [ref=e327]: KadaKareer, CCS, MSU-IIT
+          - paragraph [ref=e328]: nov 2025
+        - listitem [ref=e329]:
+          - heading "IoT Conference Philippines" [level=3] [ref=e330]
+          - paragraph [ref=e331]: SMX Convention Center, Pasay City
+          - paragraph [ref=e332]: sep 2025
+    - generic [ref=e334]:
+      - generic [ref=e335]:
+        - heading "seven hundred hours" [level=2] [ref=e336]
+        - paragraph [ref=e337]: That is the OJT I am looking for. I would rather spend it on a team where a student owns something real and has to ship it.
+      - generic [ref=e338]:
+        - link "email me" [ref=e339] [cursor=pointer]:
+          - /url: mailto:marygrace.soronio@g.msuiit.edu.ph
+        - link "marygrace.soronio@g.msuiit.edu.ph" [ref=e340] [cursor=pointer]:
+          - /url: mailto:marygrace.soronio@g.msuiit.edu.ph
+        - link "+63 966 043 4042" [ref=e341] [cursor=pointer]:
+          - /url: tel:+639660434042
+        - paragraph [ref=e342]: Iligan City, Philippines
+  - contentinfo [ref=e343]:
+    - generic [ref=e344]:
+      - paragraph [ref=e345]: Mary Grace V. Soronio
+      - generic [ref=e346]:
+        - navigation "Footer" [ref=e347]:
+          - list [ref=e348]:
+            - listitem [ref=e349]:
+              - link "work" [ref=e350] [cursor=pointer]:
+                - /url: "#work"
+            - listitem [ref=e351]:
+              - link "thesis" [ref=e352] [cursor=pointer]:
+                - /url: "#about"
+            - listitem [ref=e353]:
+              - link "training" [ref=e354] [cursor=pointer]:
+                - /url: "#training"
+            - listitem [ref=e355]:
+              - link "github" [ref=e356] [cursor=pointer]:
+                - /url: https://github.com/MaryGraceSoronio
+            - listitem [ref=e357]:
+              - link "linkedin" [ref=e358] [cursor=pointer]:
+                - /url: https://www.linkedin.com/in/mary-grace-soronio-943663298
+        - paragraph [ref=e359]: English, Cebuano, Filipino, Japanese, A1 to A2
+        - paragraph [ref=e360]: Iligan City, Philippines. Set in Outfit and Onest.
